@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTheme } from "../context/ThemeContext"
 
-const Faculty = ({ isDark }) => {
+const Faculty = () => {
+  const { isDark } = useTheme()
   const facultyInfo = {
     name: "Dr. P. LATHA",
     experience: "24+ Years",

@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTheme } from "../context/ThemeContext"
 
-const Collaborations = ({ isDark }) => {
+const Collaborations = () => {
+  const { isDark } = useTheme()
   const collaborations = [
     { name: "Entuple Technologies", description: "Leading VLSI design services" },
     { name: "CoreEl Technologies", description: "Embedded systems and FPGA solutions" },

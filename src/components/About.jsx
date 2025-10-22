@@ -2,8 +2,10 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { useTheme } from "../context/ThemeContext"
 
-const About = ({ isDark }) => {
+const About = () => {
+  const { isDark } = useTheme()
   const [activeTab, setActiveTab] = useState("overview")
 
   const tabs = [

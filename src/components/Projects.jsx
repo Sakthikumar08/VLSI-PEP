@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTheme } from "../context/ThemeContext"
 
-const Projects = ({ isDark }) => {
+const Projects = () => {
+  const { isDark } = useTheme()
   const certifications = [
     {
       provider: "ISVE",

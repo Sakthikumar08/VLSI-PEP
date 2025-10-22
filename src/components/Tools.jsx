@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTheme } from "../context/ThemeContext"
 
-const Tools = ({ isDark }) => {
+const Tools = () => {
+  const { isDark } = useTheme()
   const tools = {
     hardware: [
       {

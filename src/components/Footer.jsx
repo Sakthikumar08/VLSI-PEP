@@ -1,8 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import { useTheme } from "../context/ThemeContext"
 
-const Footer = ({ isDark }) => {
+const Footer = () => {
+  const { isDark } = useTheme()
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -56,14 +59,21 @@ const Footer = ({ isDark }) => {
           <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["About", "Tools", "Collaborations", "Projects", "Faculty"].map((item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
+              {[
+                { name: "About", path: "/about" },
+                { name: "Tools", path: "/tools" },
+                { name: "Events", path: "/events" },
+                { name: "Collaborations", path: "/collaborations" },
+                { name: "Projects", path: "/projects" },
+                { name: "Faculty", path: "/faculty" }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
                     className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

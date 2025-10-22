@@ -1,8 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom"
+import { useTheme } from "../context/ThemeContext"
 
-const Hero = ({ isDark }) => {
+const Hero = () => {
+  const { isDark } = useTheme()
+  const navigate = useNavigate()
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,42 +33,52 @@ const Hero = ({ isDark }) => {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
-            className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
+            className="icon-container icon-gradient p-6 rounded-2xl shadow-2xl"
           >
-            <i className="fas fa-microchip text-5xl text-white"></i>
+            <i className="fas fa-microchip text-5xl text-white icon-styled"></i>
           </motion.div>
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
-            className="bg-gradient-to-br from-emerald-500 to-emerald-600 p-5 rounded-2xl shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300"
+            className="icon-container p-6 rounded-2xl shadow-2xl"
+            style={{
+              background: 'linear-gradient(135deg, #10B981, #059669)',
+              boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+            }}
           >
-            <i className="fas fa-memory text-5xl text-white"></i>
+            <i className="fas fa-memory text-5xl text-white icon-styled"></i>
           </motion.div>
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, delay: 1 }}
-            className="bg-gradient-to-br from-purple-500 to-purple-600 p-5 rounded-2xl shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
+            className="icon-container p-6 rounded-2xl shadow-2xl"
+            style={{
+              background: 'linear-gradient(135deg, #EC4899, #DB2777)',
+              boxShadow: '0 4px 12px rgba(236, 72, 153, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+            }}
           >
-            <i className="fas fa-cogs text-5xl text-white"></i>
+            <i className="fas fa-cogs text-5xl text-white icon-styled"></i>
           </motion.div>
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1
-          className={`text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent ${
-            isDark ? "from-blue-400 via-purple-400 to-emerald-400" : ""
-          }`}
+          className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
         >
-          VLSI Design
-          <span className="block">Centre</span>
+          <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-500 dark:from-blue-400 dark:via-purple-400 dark:to-emerald-400 bg-clip-text text-transparent drop-shadow-lg">
+            VLSI Design
+          </span>
+          <span className="block bg-gradient-to-r from-emerald-500 via-blue-600 to-purple-600 dark:from-emerald-400 dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent drop-shadow-lg">
+            Centre
+          </span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          className={`text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed ${isDark ? "text-gray-300" : "text-gray-600"}`}
+          className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed font-medium text-gray-700 dark:text-gray-200"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
@@ -74,7 +88,7 @@ const Hero = ({ isDark }) => {
 
         {/* Description */}
         <motion.p
-          className={`text-lg mb-12 max-w-4xl mx-auto ${isDark ? "text-gray-400" : "text-gray-500"}`}
+          className="text-lg mb-12 max-w-4xl mx-auto text-gray-600 dark:text-gray-300"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
@@ -90,12 +104,16 @@ const Hero = ({ isDark }) => {
           initial="hidden"
           animate="visible"
         >
-          <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 group">
+          <button 
+            onClick={() => navigate('/about')}
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-600 hover:from-blue-700 hover:via-purple-600 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:shadow-blue-500/50 dark:shadow-blue-400/30 transition-all duration-300 hover:scale-105 group"
+          >
             <span>Explore Programs</span>
             <i className="fas fa-arrow-right group-hover:translate-x-2 transition-transform duration-300"></i>
           </button>
           <button
-            className={`inline-flex items-center gap-3 border-2 border-blue-600 ${isDark ? "text-blue-400 hover:bg-blue-600/20" : "text-blue-600 hover:bg-blue-600/10"} font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group`}
+            onClick={() => navigate('/projects')}
+            className="inline-flex items-center gap-3 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white dark:hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 group"
           >
             <span>View Projects</span>
             <i className="fas fa-project-diagram group-hover:rotate-12 transition-transform duration-300"></i>
@@ -115,10 +133,10 @@ const Hero = ({ isDark }) => {
             { number: "100+", label: "Students Trained" },
           ].map((stat, index) => (
             <motion.div key={index} className="text-center" variants={itemVariants}>
-              <div className={`text-3xl font-bold mb-2 ${isDark ? "text-blue-400" : "text-blue-600"}`}>
+              <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                 {stat.number}
               </div>
-              <div className={isDark ? "text-gray-400" : "text-gray-600"}>{stat.label}</div>
+              <div className="text-gray-600 dark:text-gray-300 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
