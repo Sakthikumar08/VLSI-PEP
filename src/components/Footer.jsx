@@ -32,7 +32,9 @@ const Footer = ({ isDark }) => {
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg">
                 <i className="fas fa-microchip text-3xl text-white"></i>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">VLSI Design Centre</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                VLSI Design Centre
+              </span>
             </div>
             <p className="text-gray-400 mb-4 leading-relaxed">
               Pioneering VLSI education and research. Empowering the next generation of semiconductor engineers with

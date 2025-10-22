@@ -57,9 +57,11 @@ const Navbar = ({ isDark }) => {
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <i className="fas fa-microchip text-2xl text-white"></i>
             </div>
-            <span className={`text-xl font-bold bg-gradient-to-r ${
-              isDark ? "from-blue-400 to-purple-400 text-transparent bg-clip-text" : "text-gray-900"
-            }`}>
+            <span
+              className={`text-xl font-bold bg-gradient-to-r ${
+                isDark ? "from-blue-400 to-purple-400 text-transparent bg-clip-text" : "text-gray-900"
+              }`}
+            >
               VLSI Design Centre
             </span>
           </motion.div>
@@ -91,11 +93,7 @@ const Navbar = ({ isDark }) => {
                 isDark ? "text-gray-300 hover:bg-gray-700" : "text-gray-700 hover:bg-gray-100"
               }`}
             >
-              {isOpen ? (
-                <i className="fas fa-times text-2xl"></i>
-              ) : (
-                <i className="fas fa-bars text-2xl"></i>
-              )}
+              {isOpen ? <i className="fas fa-times text-2xl"></i> : <i className="fas fa-bars text-2xl"></i>}
             </button>
           </div>
         </div>

@@ -73,7 +73,9 @@ const Collaborations = ({ isDark }) => {
 
         <motion.div
           className={`text-center inline-flex items-center gap-3 px-8 py-4 rounded-full mx-auto block shadow-xl ${
-            isDark ? "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 text-emerald-400" : "bg-gradient-to-r from-emerald-100 to-blue-100 text-emerald-700"
+            isDark
+              ? "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 text-emerald-400"
+              : "bg-gradient-to-r from-emerald-100 to-blue-100 text-emerald-700"
           }`}
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

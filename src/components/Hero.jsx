@@ -26,8 +26,8 @@ const Hero = ({ isDark }) => {
           initial="hidden"
           animate="visible"
         >
-          <motion.div 
-            animate={{ y: [0, -20, 0] }} 
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
             className="bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-2xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
           >
@@ -59,9 +59,7 @@ const Hero = ({ isDark }) => {
           animate="visible"
         >
           VLSI Design
-          <span className="block">
-            Centre
-          </span>
+          <span className="block">Centre</span>
         </motion.h1>
 
         {/* Subtitle */}

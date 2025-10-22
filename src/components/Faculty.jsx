@@ -98,11 +98,17 @@ const Faculty = ({ isDark }) => {
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-                  <motion.div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg" variants={itemVariants}>
+                  <motion.div
+                    className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg"
+                    variants={itemVariants}
+                  >
                     <i className="fas fa-envelope"></i>
                     <span>{facultyInfo.contact.email}</span>
                   </motion.div>
-                  <motion.div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg" variants={itemVariants}>
+                  <motion.div
+                    className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg"
+                    variants={itemVariants}
+                  >
                     <i className="fas fa-phone"></i>
                     <span>{facultyInfo.contact.phone}</span>
                   </motion.div>
@@ -119,13 +125,19 @@ const Faculty = ({ isDark }) => {
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${isDark ? "text-blue-400" : "text-blue-600"}`}>
+            <h4
+              className={`text-2xl font-bold mb-6 flex items-center gap-3 ${isDark ? "text-blue-400" : "text-blue-600"}`}
+            >
               <i className="fas fa-trophy text-3xl"></i>
               Key Achievements
             </h4>
             <motion.div className="space-y-4" variants={containerVariants} initial="hidden" animate="visible">
               {facultyInfo.achievements.map((achievement, index) => (
-                <motion.div key={index} className={`flex items-start gap-3 p-4 rounded-lg ${isDark ? "bg-gray-700" : "bg-white"}`} variants={itemVariants}>
+                <motion.div
+                  key={index}
+                  className={`flex items-start gap-3 p-4 rounded-lg ${isDark ? "bg-gray-700" : "bg-white"}`}
+                  variants={itemVariants}
+                >
                   <i className="fas fa-check-circle text-emerald-500 text-xl mt-1 flex-shrink-0"></i>
                   <p className={`leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}>{achievement}</p>
                 </motion.div>

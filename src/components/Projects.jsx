@@ -72,7 +72,9 @@ const Projects = ({ isDark }) => {
             <motion.div
               key={index}
               className={`card-hover rounded-xl p-8 shadow-2xl border group ${
-                isDark ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600" : "bg-gradient-to-br from-white to-emerald-50 border-gray-200"
+                isDark
+                  ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
+                  : "bg-gradient-to-br from-white to-emerald-50 border-gray-200"
               }`}
               variants={itemVariants}
             >

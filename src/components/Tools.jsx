@@ -58,9 +58,9 @@ const Tools = ({ isDark }) => {
 
         {/* Hardware Tools */}
         <div className="mb-12">
-          <h3 className={`text-3xl font-bold mb-6 flex items-center gap-3 ${
-            isDark ? "text-blue-400" : "text-blue-600"
-          }`}>
+          <h3
+            className={`text-3xl font-bold mb-6 flex items-center gap-3 ${isDark ? "text-blue-400" : "text-blue-600"}`}
+          >
             <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-xl shadow-lg">
               <i className="fas fa-microchip text-2xl text-white"></i>
             </div>
@@ -77,7 +77,9 @@ const Tools = ({ isDark }) => {
               <motion.div
                 key={index}
                 className={`card-hover rounded-xl p-6 shadow-lg border group ${
-                  isDark ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600" : "bg-gradient-to-br from-white to-blue-50 border-gray-200"
+                  isDark
+                    ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
+                    : "bg-gradient-to-br from-white to-blue-50 border-gray-200"
                 }`}
                 variants={itemVariants}
               >
@@ -93,9 +95,11 @@ const Tools = ({ isDark }) => {
 
         {/* Licensed Software */}
         <div className="mb-12">
-          <h3 className={`text-3xl font-bold mb-6 flex items-center gap-3 ${
-            isDark ? "text-emerald-400" : "text-emerald-600"
-          }`}>
+          <h3
+            className={`text-3xl font-bold mb-6 flex items-center gap-3 ${
+              isDark ? "text-emerald-400" : "text-emerald-600"
+            }`}
+          >
             <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 p-3 rounded-xl shadow-lg">
               <i className="fas fa-shield-alt text-2xl text-white"></i>
             </div>
@@ -112,7 +116,9 @@ const Tools = ({ isDark }) => {
               <motion.div
                 key={index}
                 className={`card-hover rounded-xl p-6 shadow-lg border group ${
-                  isDark ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600" : "bg-gradient-to-br from-white to-emerald-50 border-gray-200"
+                  isDark
+                    ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
+                    : "bg-gradient-to-br from-white to-emerald-50 border-gray-200"
                 }`}
                 variants={itemVariants}
               >
@@ -128,9 +134,11 @@ const Tools = ({ isDark }) => {
 
         {/* Open Source Tools */}
         <div>
-          <h3 className={`text-3xl font-bold mb-6 flex items-center gap-3 ${
-            isDark ? "text-purple-400" : "text-purple-600"
-          }`}>
+          <h3
+            className={`text-3xl font-bold mb-6 flex items-center gap-3 ${
+              isDark ? "text-purple-400" : "text-purple-600"
+            }`}
+          >
             <div className="bg-gradient-to-br from-purple-500 to-purple-600 p-3 rounded-xl shadow-lg">
               <i className="fas fa-download text-2xl text-white"></i>
             </div>
@@ -147,7 +155,9 @@ const Tools = ({ isDark }) => {
               <motion.div
                 key={index}
                 className={`card-hover rounded-xl p-6 shadow-lg border group ${
-                  isDark ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600" : "bg-gradient-to-br from-white to-purple-50 border-gray-200"
+                  isDark
+                    ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
+                    : "bg-gradient-to-br from-white to-purple-50 border-gray-200"
                 }`}
                 variants={itemVariants}
               >
