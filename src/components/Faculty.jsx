@@ -35,7 +35,7 @@ const Faculty = () => {
   }
 
   return (
-    <section id="faculty" className={`section-padding ${isDark ? "bg-gray-800" : "bg-white"}`}>
+    <section id="faculty" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -121,7 +121,7 @@ const Faculty = () => {
 
           {/* Achievements */}
           <motion.div
-            className={`mt-8 rounded-2xl p-8 shadow-2xl ${isDark ? "bg-gradient-to-br from-gray-800 to-gray-700" : "bg-gradient-to-br from-gray-50 to-blue-50"}`}
+            className="mt-8 rounded-2xl p-8 shadow-2xl bg-white/10 dark:bg-gray-800/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -137,7 +137,7 @@ const Faculty = () => {
               {facultyInfo.achievements.map((achievement, index) => (
                 <motion.div
                   key={index}
-                  className={`flex items-start gap-3 p-4 rounded-lg ${isDark ? "bg-gray-700" : "bg-white"}`}
+                  className="flex items-start gap-3 p-4 rounded-lg bg-white/20 dark:bg-gray-700/50"
                   variants={itemVariants}
                 >
                   <i className="fas fa-check-circle text-emerald-500 text-xl mt-1 flex-shrink-0"></i>
@@ -149,7 +149,7 @@ const Faculty = () => {
 
           {/* MODROB Project Highlight */}
           <motion.div
-            className={`mt-6 rounded-xl p-6 border shadow-xl ${isDark ? "bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border-emerald-500/30" : "bg-gradient-to-r from-emerald-50 to-blue-50 border-emerald-200"}`}
+            className="mt-6 rounded-xl p-6 border shadow-xl bg-white/20 dark:bg-gray-800/30 border-emerald-300/50 dark:border-emerald-500/30"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}

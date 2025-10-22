@@ -63,7 +63,7 @@ const About = () => {
   }
 
   return (
-    <section id="about" className={`section-padding ${isDark ? "bg-gray-800" : "bg-white"}`}>
+    <section id="about" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -107,7 +107,7 @@ const About = () => {
 
           {/* Tab Content */}
           <motion.div
-            className={`rounded-2xl p-8 shadow-lg ${isDark ? "bg-gray-700" : "bg-gray-50"}`}
+            className="rounded-2xl p-8 shadow-lg"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
@@ -135,7 +135,7 @@ const About = () => {
                   {tabContent[activeTab].areas.map((area, index) => (
                     <motion.div
                       key={index}
-                      className={`flex items-center space-x-3 p-3 rounded-lg shadow-sm ${isDark ? "bg-gray-600" : "bg-white"}`}
+                      className="flex items-center space-x-3 p-3 rounded-lg shadow-sm bg-white/10 dark:bg-gray-800/30"
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}

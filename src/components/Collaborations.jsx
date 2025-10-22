@@ -26,7 +26,7 @@ const Collaborations = () => {
   }
 
   return (
-    <section id="collaborations" className={`section-padding ${isDark ? "bg-gray-800" : "bg-white"}`}>
+    <section id="collaborations" className="section-padding">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-12"
@@ -53,11 +53,7 @@ const Collaborations = () => {
           {collaborations.map((collab, index) => (
             <motion.div key={index} className="card-hover group" variants={itemVariants} whileHover={{ y: -10 }}>
               <div
-                className={`rounded-xl p-8 text-center h-full border-2 transition-all duration-300 shadow-2xl ${
-                  isDark
-                    ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600 group-hover:border-blue-500 group-hover:shadow-blue-500/50"
-                    : "bg-gradient-to-br from-blue-50 to-purple-50 border-transparent group-hover:border-blue-600 group-hover:shadow-blue-500/30"
-                }`}
+                className="rounded-xl p-8 text-center h-full border-2 transition-all duration-300 shadow-2xl bg-white/10 dark:bg-gray-800/30 border-gray-300/30 dark:border-gray-600/30 group-hover:border-blue-500 group-hover:shadow-blue-500/50"
               >
                 <motion.div
                   className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
@@ -74,11 +70,7 @@ const Collaborations = () => {
         </motion.div>
 
         <motion.div
-          className={`text-center inline-flex items-center gap-3 px-8 py-4 rounded-full mx-auto block shadow-xl ${
-            isDark
-              ? "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 text-emerald-400"
-              : "bg-gradient-to-r from-emerald-100 to-blue-100 text-emerald-700"
-          }`}
+          className="text-center inline-flex items-center gap-3 px-8 py-4 rounded-full mx-auto block shadow-xl bg-white/20 dark:bg-gray-800/30 text-emerald-700 dark:text-emerald-400"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}

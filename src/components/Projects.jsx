@@ -44,7 +44,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className={`section-padding ${isDark ? "bg-gray-900" : "bg-gradient-to-br from-slate-50 to-blue-50"}`}
+      className="section-padding"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -73,11 +73,7 @@ const Projects = () => {
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              className={`card-hover rounded-xl p-8 shadow-2xl border group ${
-                isDark
-                  ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
-                  : "bg-gradient-to-br from-white to-emerald-50 border-gray-200"
-              }`}
+              className="card-hover rounded-xl p-8 shadow-2xl border group bg-white/10 dark:bg-gray-800/30 border-gray-300/30 dark:border-gray-600/30"
               variants={itemVariants}
             >
               <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 p-4 rounded-xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -97,9 +93,7 @@ const Projects = () => {
 
         {/* NPTEL Certifications */}
         <motion.div
-          className={`rounded-2xl p-8 shadow-2xl ${
-            isDark ? "bg-gradient-to-br from-gray-800 to-gray-700" : "bg-gradient-to-br from-white to-blue-50"
-          }`}
+          className="rounded-2xl p-8 shadow-2xl bg-white/10 dark:bg-gray-800/30"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -120,9 +114,7 @@ const Projects = () => {
             {nptelCertifications.map((course, index) => (
               <motion.div
                 key={index}
-                className={`flex items-center space-x-3 p-4 rounded-lg transition-all duration-300 ${
-                  isDark ? "bg-gray-700 hover:bg-gray-600" : "bg-blue-50 hover:bg-blue-100"
-                }`}
+                className="flex items-center space-x-3 p-4 rounded-lg transition-all duration-300 bg-white/20 dark:bg-gray-700/50 hover:bg-white/30 dark:hover:bg-gray-600/50"
                 variants={itemVariants}
               >
                 <i className="fas fa-certificate text-blue-600 dark:text-blue-400"></i>

@@ -42,7 +42,7 @@ const Tools = () => {
   return (
     <section
       id="tools"
-      className={`section-padding ${isDark ? "bg-gray-900" : "bg-gradient-to-br from-blue-50 to-slate-100"}`}
+      className="section-padding"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -78,11 +78,7 @@ const Tools = () => {
             {tools.hardware.map((tool, index) => (
               <motion.div
                 key={index}
-                className={`card-hover rounded-xl p-6 shadow-lg border group ${
-                  isDark
-                    ? "bg-gradient-to-br from-gray-800 to-gray-700 border-gray-600"
-                    : "bg-gradient-to-br from-white to-blue-50 border-gray-200"
-                }`}
+                className="card-hover rounded-xl p-6 shadow-lg border group bg-white/10 dark:bg-gray-800/30 border-gray-300/30 dark:border-gray-600/30"
                 variants={itemVariants}
               >
                 <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 p-4 rounded-xl inline-block mb-4 group-hover:scale-110 transition-transform duration-300">
