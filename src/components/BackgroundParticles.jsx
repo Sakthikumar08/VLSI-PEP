@@ -52,36 +52,6 @@ const BackgroundParticles = () => {
 
   return (
     <div className="particles-container absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Full-Page Grid Overlay - Base Layer */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage: isDark
-            ? `linear-gradient(rgba(59,130,246,0.05) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px)`
-            : `linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px',
-          zIndex: 1,
-        }}
-      />
-
-      {/* Top-Right Corner Enhanced Grid with Gradient */}
-      <div 
-        className="absolute top-0 right-0 w-full h-full pointer-events-none"
-        style={{
-          backgroundImage: isDark
-            ? `linear-gradient(rgba(147,51,234,0.08) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(147,51,234,0.08) 1px, transparent 1px)`
-            : `linear-gradient(rgba(147,51,234,0.2) 1px, transparent 1px),
-               linear-gradient(90deg, rgba(147,51,234,0.2) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px',
-          maskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
-          WebkitMaskImage: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%)',
-          zIndex: 2,
-        }}
-      />
-
       {/* Gradient Orbs - Layer 3 */}
       <div className="absolute inset-0" style={{ zIndex: 3 }}>
         {particles.map((particle) => (
@@ -227,27 +197,6 @@ const BackgroundParticles = () => {
           filter: 'blur(80px)',
         }}
       />
-
-      {/* Animated Grid Lines - Layer 6 */}
-      <div className="absolute inset-0 opacity-20" style={{ zIndex: 6 }}>
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: isDark
-              ? 'linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px)'
-              : 'linear-gradient(rgba(59,130,246,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.15) 1px, transparent 1px)',
-            backgroundSize: '100px 100px',
-          }}
-          animate={{
-            backgroundPosition: ['0px 0px', '100px 100px'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-      </div>
 
       {/* Glowing Dots - Layer 7 */}
       <div className="absolute inset-0" style={{ zIndex: 7 }}>

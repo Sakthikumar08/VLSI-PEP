@@ -105,7 +105,7 @@ const Footer = () => {
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-400 text-sm">© 2025 VLSI Design Centre. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© 2025 VLSI Design Centre. All rights reserved.<a href="https://www.mustardworks.in/"> Powered by MustardWorks.</a></p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <span className="text-gray-400 text-sm hover:text-blue-400 cursor-pointer transition-colors">
               Privacy Policy

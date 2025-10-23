@@ -326,6 +326,15 @@ html {
   position: relative;
 }
 
+/* 3D Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
